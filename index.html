@@ -451,13 +451,13 @@ h2{font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:800;letter-spacing:-.02em;li
 .cities{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .city{
   background:var(--surface);border:1px solid var(--line);border-radius:16px;
-  padding:24px 22px;box-shadow:var(--shadow-sm);
+  min-width:0;padding:24px 22px;box-shadow:var(--shadow-sm);
   transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s,opacity .9s var(--ease),filter .9s var(--ease);
 }
 .city:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:#D5E2F5}
-.city h3{font-size:1.05rem;font-weight:800;margin-bottom:6px;letter-spacing:-.01em}
+.city h3{font-size:1.05rem;font-weight:800;margin-bottom:6px;letter-spacing:-.01em;overflow-wrap:anywhere}
 .city h3 svg{display:inline-block;vertical-align:-3px;width:17px;height:17px;color:var(--accent);margin-right:7px}
-.city p{font-size:.9rem;color:var(--muted)}
+.city p{font-size:.9rem;color:var(--muted);overflow-wrap:anywhere}
 .city p a{font-weight:800;color:var(--ink)}
 .city p a:hover{color:var(--accent)}
 
@@ -579,6 +579,11 @@ footer{padding:44px 0 120px;border-top:1px solid var(--line);background:var(--bg
   .card-icon{margin-bottom:0;grid-row:1/3}
   .card h3{font-size:1.02rem;align-self:center}
   .card p{grid-column:2}
+
+  .cities{grid-template-columns:1fr;gap:12px}
+  .city{padding:20px 18px}
+  .city h3{font-size:1rem}
+  .city p{font-size:.88rem}
 
   .calc-left{padding:26px 18px}
   .calc-right{padding:28px 18px}
